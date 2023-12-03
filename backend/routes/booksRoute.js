@@ -6,7 +6,7 @@ const router = express.Router();
 // Route to Save a new Book
 router.post("/", async (request, response) => {
   try {
-    console.log("Request body:", request.body);
+    console.log("POST /books", request.body);
     if (
       !request.body.title ||
       !request.body.author ||
