@@ -12,15 +12,16 @@ const ShowBooks = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`hppt://localhost:5555/books/${id}`)
+      .get(`http://localhost:5555/books/${id}`)
       .then((response) => {
-        setBooks(false);
+        setBooks(response.data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("error fetching book:", error);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="p-2">
