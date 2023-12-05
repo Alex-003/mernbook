@@ -1,19 +1,8 @@
-# Project Name
+# MERN bookstore
 
 A comprehensive MERN (MongoDB, Express.js, React, Node.js) bookstore project that allows users to manage books with ease. You can add, edit, or delete books in various views, including card and table formats.
 
-## Overview
-
-This project provides a user-friendly interface to manage a bookstore, facilitating tasks such as adding new books, editing existing ones, or removing books from the collection. The implementation utilizes the MERN stack, combining the power of MongoDB, Express.js, React, and Node.js.
-
-## Features
-
-Dynamic Views: Switch between card and table views for a customizable book management experience.
-CRUD Operations: Perform Create, Read, Update, and Delete operations on the book entries.
-Responsive Design: The interface is designed to work seamlessly on various devices, ensuring accessibility.
-Easy Installation: Follow the step-by-step guide below to set up the project on your local machine.
-
-## Getting Started
+## Installation
 
 ### Prerequisites
 
@@ -36,44 +25,29 @@ Backend set up:
 - [express](https://expressjs.com/): Fast, unopinionated, minimalist web framework for Node.js.
 - [nodemon](https://nodemon.io/): Utility that monitors for changes in your source and automatically restarts your server.
 
-### Installation
+## Installation
 
-1 Clone the repository:
+1. Clone the repository:
 
-git clone https://github.com/your-username/bookstore-project.git
+`git clone https://github.com/your-username/bookstore-project.git`
 
-2 Navigate to the project directory
+2. Navigate to the project directory
 
-cd bookstore-project
+`cd bookstore-project`
 
-3 Install dependencies for both frontend and backend:
+3. Install dependencies for both frontend and backend:
 
-# Install frontend dependencies
+`cd frontend`
+`npm install`
 
-cd client
-npm install
+`cd backend` `npm install`
 
-# Install backend dependencies
+4. Start the development server:
 
-cd ../server
-npm install
+### Start frontend development server
 
-4 Start the development server:
+`cd frontend` `npm start`
 
-# Start frontend development server
+### Start backend development server
 
-cd client
-npm start
-
-# Start backend development server
-
-cd ../server
-npm start
-
-## Usage
-
-Explore the project and manage your book collection effortlessly. Switch between card and table views for a personalized experience. Perform CRUD operations to keep your bookstore organized.
-
-## Contact
-
-For any questions or inquiries, feel free to reach out to Alex Segura at alexseguradev@gmail.com.
+`cd backend` `npm start`
