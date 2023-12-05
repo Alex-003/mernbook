@@ -5,15 +5,23 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const DeleteBooks = () => {
+  // State for loading indicator
   const [loading, setLoading] = useState(false);
+
+  // Hook for navigation
   const navigate = useNavigate();
+
+  // Extracting id from URL params
   const { id } = useParams();
+
+  // Function to handle book deletion
   const handleDeleteBook = () => {
     setLoading(true);
     axios
       .delete(`http://localhost:5555/books/${id}`)
       .then(() => {
         setLoading(false);
+        // Redirect to home page after successful book deletion
         navigate("/");
       })
       .catch((error) => {

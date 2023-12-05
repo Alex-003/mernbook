@@ -5,13 +5,21 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditBooks = () => {
+  // State for book details
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [publishYear, setPublishYear] = useState("");
+
+  // State for loading indicator
   const [loading, setLoading] = useState(false);
+
+  // React router to navigate between pages
   const navigate = useNavigate();
+
+  // Extracting id from URL params
   const { id } = useParams();
 
+  // Fetch book details on component mount
   useEffect(() => {
     setLoading(true);
     axios
@@ -29,6 +37,7 @@ const EditBooks = () => {
       });
   }, []);
 
+  // Update book details and save changes
   const handleSaveBook = () => {
     const data = {
       title,

@@ -5,10 +5,16 @@ import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 
 const ShowBooks = () => {
+  // State for storing book details
   const [book, setBooks] = useState({});
+
+  // State for loading indicator
   const [loading, setLoading] = useState(false);
+
+  // Extracting book i from URL params
   const { id } = useParams();
 
+  // Fetch book details on comp mount and when id changes
   useEffect(() => {
     setLoading(true);
     axios
