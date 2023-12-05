@@ -23,6 +23,7 @@ Front end set up:
 - [react-dom](https://reactjs.org/docs/react-dom.html): Entry point to the DOM and server renderers for React.
 - [axios](https://axios-http.com/): Promise-based HTTP client for the browser and Node.js.
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start): Declarative routing for React.js.
+- notistack
 
 Backend set up:
 
