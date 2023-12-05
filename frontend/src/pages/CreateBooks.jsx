@@ -5,12 +5,18 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const CreateBooks = () => {
+  // State for books details
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [publishYear, setPublishYear] = useState("");
+
+  // State for loading indicator
   const [loading, setLoading] = useState(false);
+
+  // Hook for navigation
   const navigate = useNavigate();
 
+  // Function to handle saving a new book
   const handleSaveBook = () => {
     const data = {
       title,
@@ -22,6 +28,7 @@ const CreateBooks = () => {
       .post(`http://localhost:5555/books`, data)
       .then(() => {
         setLoading(false);
+        // Redirect to home page after creation
         navigate("/");
       })
       .catch((error) => {
